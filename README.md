@@ -9,7 +9,7 @@ Ce projet étudie la **prédiction du ratio de Sharpe futur** d’un portefeuill
 - Cible : ratio de Sharpe futur d’un portefeuille de 7 stratégies quantitatives  
 - Horizon : 5 jours de trading (Sharpe annualisé)
 - Données : poids des stratégies, trajectoires de prix sur 21 jours et valeurs de plusieurs instruments
-- Approche : feature engineering + modèles supervisés avec une séparation stricte entraînement / validation / test afin d’éviter toute fuite d’information (data leakage)
+- Approche : feature engineering + modèles supervisés avec une séparation stricte entraînement / validation / test afin d’éviter tout data leakage
 
 Plusieurs modèles sont testés :
 - Elastic Net
