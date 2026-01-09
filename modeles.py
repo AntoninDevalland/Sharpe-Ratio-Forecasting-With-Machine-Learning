@@ -129,3 +129,23 @@ def refit_trainval_and_test(best_params, base_pipe, X_train, Y_train, X_val, Y_v
     print(f"std(pred)={np.std(pred_test):.4f}  std(y)={np.std(yte):.4f}")
 
     return final_pipe, test_score, pred_test
+
+
+def build_mlp(input_dim, hidden_units, dropout, l2_reg, learning_rate):
+    # Construction du MLP (Dense + ReLU, avec L2 et dropout optionnel)
+    inputs = keras.Input(shape=(input_dim,))
+    x = inputs
+
+    for units in hidden_units:
+        x = layers.Dense(units, kernel_regularizer=regularizers.l2(l2_reg))(x)
+        x = layers.Activation("relu")(x)
+        if dropout > 0:
+            x = layers.Dropout(dropout)(x)
+
+    outputs = layers.Dense(1)(x)
+    model = keras.Model(inputs, outputs)
+
+    # Adam avec gradient clipping pour éviter les gros sauts
+    opt = keras.optimizers.Adam(learning_rate=learning_rate, clipnorm=1.0)
+    model.compile(optimizer=opt, loss="mae")
+    return model
