@@ -33,13 +33,13 @@ Plusieurs modèles sont testés :
 
 
 ---
-## Méthodologie (résumé)
+## Méthodologie
 
 - Feature engineering : rendements, structures de covariance, moments d’ordre supérieur, indice de concentration du portefeuille (HHI), etc. 
 - Sélection des hyperparamètres sur le jeu de validation, puis ré-entraînement des modèles retenus avant l’évaluation finale.
 - Comparaison de plusieurs modèles de machine learning : Elastic Net, Random Forest, ExtraTrees, XGBoost et réseaux de neurones (MLP) et ensemble sur le MLP.
 
-## Résultats (vue d’ensemble)
+## Résultats
 
 - Les modèles parviennent à améliorer la prédiction de manière robuste par rapport à un benchmark naïf, malgré la difficulté intrinsèque de la prédiction d’un ratio de Sharpe futur à horizon 5 jours.
 - L’analyse des hyperparamètres sélectionnés montre que les modèles qui se comportent le mieux hors échantillon privilégient des architectures simples et une forte régularisation, ce qui suggère un signal instable et réparti sur de nombreuses variables plutôt que concentré sur quelques facteurs dominants.
