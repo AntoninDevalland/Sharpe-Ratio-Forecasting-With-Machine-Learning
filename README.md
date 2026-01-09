@@ -35,11 +35,9 @@ Plusieurs modèles sont testés :
 ---
 ## Méthodologie (résumé)
 
-- Feature engineering centré sur le ratio de Sharpe : rendements logarithmiques, volatilités, structures de covariance entre stratégies, moments d’ordre supérieur et indice de concentration du portefeuille (HHI).
-- Séparation entraînement / validation / test effectuée par groupes de trajectoires de marché, afin d’éviter toute fuite d’information.
+- Feature engineering : rendements, structures de covariance, moments d’ordre supérieur, indice de concentration du portefeuille (HHI), etc. 
 - Sélection des hyperparamètres sur le jeu de validation, puis ré-entraînement des modèles retenus avant l’évaluation finale.
 - Comparaison de plusieurs modèles de machine learning : Elastic Net, Random Forest, ExtraTrees, XGBoost et réseaux de neurones (MLP) et ensemble sur le MLP.
-- Évaluation finale basée principalement sur la **MAE**, complétée par la corrélation entre prédictions et valeurs observées.
 
 ## Résultats (vue d’ensemble)
 
