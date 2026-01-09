@@ -42,7 +42,7 @@ Plusieurs modèles sont testés :
 ## Résultats (vue d’ensemble)
 
 - Les modèles parviennent à améliorer la prédiction de manière robuste par rapport à un benchmark naïf, malgré la difficulté intrinsèque de la prédiction d’un ratio de Sharpe futur à horizon 5 jours.
-- L’analyse des hyperparamètres sélectionnés met en évidence que les modèles généralisant le mieux privilégient des architectures simples et une forte régularisation, ce qui indique que le signal est diffus, instable et réparti sur de nombreuses variables plutôt que porté par quelques facteurs dominants.
+- L’analyse des hyperparamètres sélectionnés montre que les modèles qui se comportent le mieux hors échantillon privilégient des architectures simples et une forte régularisation, ce qui suggère un signal instable et réparti sur de nombreuses variables plutôt que concentré sur quelques facteurs dominants.
 - Dans un contexte de signal faible et bruité, un ensemble de MLP permet de combiner la capacité des réseaux de neurones à capter des relations non linéaires avec l’effet stabilisant de l’agrégation.
 
 
